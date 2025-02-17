@@ -23,11 +23,6 @@ variable "region" {
   default     = "ap-northeast-1"
 }
 
-variable "environment" {
-  description = "環境名"
-  default     = "production"
-}
-
 variable "project" {
   description = "プロジェクト名"
   default     = "dify"
