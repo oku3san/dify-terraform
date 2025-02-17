@@ -1,6 +1,8 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="TFNotInitialized" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="TfUnknownBlockType" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="TfUnknownResource" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>
