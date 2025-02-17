@@ -391,7 +391,7 @@ resource "aws_security_group" "elasticache" {
 # Aurora管理者パスワードを生成
 resource "random_password" "redis" {
   length  = 16   # 生成するパスワードの長さ
-  special = true # 特殊文字を含める
+  special = false # 特殊文字を含ない
 }
 
 # DifyアプリケーションからElastiCacheへのアクセスを許可
@@ -428,7 +428,7 @@ resource "aws_elasticache_replication_group" "redis" {
   at_rest_encryption_enabled = true
   transit_encryption_enabled = true
 
-  auth_token_update_strategy = "ROTATE"
+  auth_token_update_strategy = "SET"
   auth_token                 = random_password.redis.result
 
   maintenance_window       = "sat:18:00-sat:19:00"
